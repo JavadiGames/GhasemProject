@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgcolor"
+    tools:context=".MainActivity">
+
+    <developer.shivam.crescento.CrescentoContainer
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:elevation="20dp"
+        app:curvature="80dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/smsauth"
+            android:scaleType="centerCrop"/>
+
+    </developer.shivam.crescento.CrescentoContainer>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="220dp"
+        android:translationZ="90dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:id="@+id/layout_sendphone"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:text="شماره تلفن خود را وارد کنید "/>
+
+            <EditText
+                android:id="@+id/edt_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                android:drawableRight="@drawable/phoneicon"
+                android:drawablePadding="5dp"
+                android:hint="شماره همراه ...09"
+                android:background="@drawable/background_edittext"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:maxLength="11"
+                android:padding="10dp"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/txt_sendphone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:gravity="center"
+                android:padding="12dp"
+                android:background="@drawable/key1"
+                android:text="ارسال کد"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_sendcode"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:textSize="16sp"
+                android:text="لطفاً کد تایید را وارد کنید"/>
+
+            <TextView
+                android:id="@+id/txt_show_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="10dp"
+                android:padding="10dp"
+                android:drawableRight="@drawable/phoneicon"
+                android:drawablePadding="5dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divider"/>
+
+            <TextView
+                android:id="@+id/txt_again"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ارسال دوباره کد"
+                android:layout_gravity="right"
+                android:padding="8dp"
+                android:textColor="@color/teal_700"
+                android:textSize="14sp"/>
+
+            <EditText
+                android:id="@+id/edt_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:drawableRight="@drawable/lockicon"
+                android:drawablePadding="5dp"
+                android:hint="کد فعالسازی"
+                android:background="@drawable/background_edittext"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLines="1"
+                android:maxLength="6"
+                android:padding="10dp"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/txt_send_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:padding="12dp"
+                android:background="@drawable/key1"
+                android:text="تایید شماره همراه"
+                android:textColor="@color/white"/>
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_success"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="30dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/check_icon"
+                android:layout_margin="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ورود کاربر با موفقیت انجام شد"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</RelativeLayout>
